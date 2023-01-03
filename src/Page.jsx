@@ -1,4 +1,5 @@
 import './App.css';
+import Answers from './Answers'
 
 export default function Page() {
   return (
@@ -7,9 +8,7 @@ export default function Page() {
         <div className="progress-bar"></div>
       </div>
       <h1>Testing this out</h1>
-      <button className="AnswerButton">Test</button>
-      <button className="AnswerButton">Test</button>
-      <button className="AnswerButton">Test</button>
+      <Answers />
       <button className="ContinueButton ContinueButton-disabled">CONTINUE</button>
     </div>
   )
