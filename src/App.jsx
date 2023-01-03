@@ -10,7 +10,6 @@ export default function App() {
       <button className="AnswerButton">Test</button>
       <button className="AnswerButton">Test</button>
       <button className="AnswerButton">Test</button>
-      <button className="ContinueButton ContinueButton-disabled">CONTINUE</button>
     </main>
   )
 }
