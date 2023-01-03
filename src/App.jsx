@@ -1,10 +1,16 @@
 import './App.css';
-import Page from './Page';
 
 export default function App() {
   return (
     <main>
-      <Page />
+      <div className="progress">
+        <div className="progress-bar"></div>
+      </div>
+      <h1>Testing this out</h1>
+      <button className="AnswerButton">Test</button>
+      <button className="AnswerButton">Test</button>
+      <button className="AnswerButton">Test</button>
+      <button className="ContinueButton ContinueButton-disabled">CONTINUE</button>
     </main>
   )
 }
