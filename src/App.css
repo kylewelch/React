@@ -43,6 +43,10 @@ main {
   color: #52666D;
 }
 
+.ContinueButton-disabled:hover {
+  cursor: default;
+}
+
 .AnswerButton {
   font-family: inherit;
   font-size: 18px;
@@ -54,4 +58,21 @@ main {
   color: #fff;
   width: 100%;
   margin-bottom: 16px;
+}
+
+.AnswerButton-selected {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 12px;
+  border: 3px solid #6BBDF3;
+  background: #232E35;
+  color: #6BBDF3;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+button:hover {
+  cursor: pointer;
 }

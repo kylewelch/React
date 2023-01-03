@@ -1,7 +1,7 @@
 import './App.css';
 import Answer from './Answer'
 
-export default function Answers() {
+export default function Answers({updateSelection, selectedAnswer}) {
   const answers = ['one', 'two', 'three']
   return (
     <div>
@@ -13,6 +13,8 @@ export default function Answers() {
           answerText={answer}
           answerNumber={index}
           key={index}
+          updateSelection={updateSelection}
+          selected={index === selectedAnswer}
           />
         )
       })}
