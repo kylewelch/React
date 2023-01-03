@@ -1,6 +1,7 @@
 import './App.css'
 import {useState} from 'react'
 import Answers from './Answers'
+import ContinueButton from './ContinueButton'
 
 export default function Page() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -19,7 +20,9 @@ export default function Page() {
         updateSelection={updateSelection}
         selectedAnswer={selectedAnswer}
       />
-      <button className="ContinueButton ContinueButton-disabled">CONTINUE</button>
+      <ContinueButton 
+        selectionMade={selectedAnswer !== null} 
+      />
     </div>
   )
 }
