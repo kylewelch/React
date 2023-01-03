@@ -12,19 +12,3 @@ main {
   max-width: 500px;
   margin: 30px auto;
 }
-
-.progress {
-  height: 16px;
-  width: 100%;
-  background: #38454F;
-  border-radius: 8px;
-}
-
-.progress-bar {
-  height: 16px;
-  width: 50%;
-  background: #92D333;
-  border-radius: 8px;
-}
-
-/* Test */
