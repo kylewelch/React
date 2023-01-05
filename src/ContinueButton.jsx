@@ -1,7 +1,7 @@
 import './App.css';
 
-export default function ContinueButton({ selectionMade, nextQuestion }) {
+export default function ContinueButton({ selectionMade, checkAnswer }) {
   return (
-    <button className={selectionMade ? "ContinueButton" : "ContinueButton-disabled"} onClick={selectionMade ? nextQuestion : null}>CONTINUE</button>
+    <button className={selectionMade ? "ContinueButton" : "ContinueButton-disabled"} onClick={selectionMade ? checkAnswer : null}>CONTINUE</button>
   )
 }
