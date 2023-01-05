@@ -2,6 +2,7 @@ import './App.css'
 import {useState} from 'react'
 import Answers from './Answers'
 import ContinueButton from './ContinueButton'
+import Feedback from './Feedback'
 
 export default function Page() {
   const questions = ["Question 1?", "Question 2?", "Woohoo! You did it!"];
@@ -9,6 +10,7 @@ export default function Page() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [feedback, setFeedback] = useState(null);
+  const [correctAnswer, setCorrectAnswer] = useState(false);
   const barLength = {
     width: currentQuestion / (questions.length - 1) * 100 + '%',
     minWidth: '20px'
@@ -18,14 +20,21 @@ export default function Page() {
   }
   function checkAnswer() {
     if (selectedAnswer === correctAnswers[currentQuestion]) {
-      setFeedback("That's right!")
+      setCorrectAnswer(true);
+      setFeedback("Feedback-entrance");
     }
     else {
-      setFeedback("Oops, try again")
+      setCorrectAnswer(false);
+      setFeedback("Feedback-entrance")
     }
   }
   function nextQuestion() {
     setCurrentQuestion(currentQuestion + 1);
+    setSelectedAnswer(null);
+    setFeedback("Feedback-exit");
+  }
+  function dismissFeedback() {
+    setFeedback("Feedback-exit");
     setSelectedAnswer(null);
   }
   return (
@@ -42,10 +51,15 @@ export default function Page() {
           currentQuestion={currentQuestion}
         />
       }
-      {feedback}
       <ContinueButton 
         selectionMade={selectedAnswer !== null} 
         checkAnswer={checkAnswer}
+      />
+      <Feedback 
+        feedback={feedback}
+        correctAnswer={correctAnswer}
+        dismissFeedback={dismissFeedback}
+        nextQuestion={nextQuestion}
       />
     </div>
   )

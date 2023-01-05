@@ -34,9 +34,12 @@ main {
   font-size: 18px;
   font-weight: 700;
   width: 100%;
+  max-width: 500px;
   padding: 12px;
   border-radius: 12px;
   border: none;
+  position: fixed;
+  bottom: 30px;
   background: #92D333;
 }
 
@@ -45,9 +48,12 @@ main {
   font-size: 18px;
   font-weight: 700;
   width: 100%;
+  max-width: 500px;
   padding: 12px;
   border-radius: 12px;
   border: none;
+  position: fixed;
+  bottom: 30px;
   background: #38454F;
   color: #52666D;
 }
@@ -89,4 +95,73 @@ button:hover {
 .celebration {
   max-width: 100%;
   margin: 20px auto;
+}
+
+.Feedback {
+  width: 100%;
+  background: #232E35;
+  position: fixed;
+  bottom: -180px;
+  left: 0;
+  z-index: 20;
+}
+
+.Feedback-content {
+  margin: 36px auto;
+  padding: 0 16px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.Feedback-title {
+  color: #92D333;
+}
+
+.Feedback-title-incorrect {
+  color: #ED5756;
+}
+
+.FeedbackButton {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #92D333;
+}
+
+.FeedbackButton-incorrect {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #ED5756;
+}
+@keyframes feedback-entrance {
+  from {bottom: -180px;}
+  to {bottom: 0;}
+}
+
+.Feedback-entrance {
+  animation-name: feedback-entrance;
+  animation-duration: .15s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes feedback-exit {
+  from {bottom: 0;}
+  to {bottom: -180px;}
+}
+
+.Feedback-exit {
+  animation-name: feedback-exit;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
