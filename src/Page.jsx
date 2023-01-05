@@ -7,6 +7,10 @@ export default function Page() {
   const questions = ["Question 1?", "Question 2?", "Woohoo! You did it!"];
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const barLength = {
+    width: currentQuestion / (questions.length - 1) * 100 + '%',
+    minWidth: '20px'
+  }
   function updateSelection(answer) {
     setSelectedAnswer(answer);
   }
@@ -17,7 +21,7 @@ export default function Page() {
   return (
     <div>
       <div className="progress">
-        <div className="progress-bar"></div>
+        <div className="progress-bar" style={barLength}></div>
       </div>
       <h1>{questions[currentQuestion]}</h1>
       {currentQuestion === (questions.length - 1) ? 

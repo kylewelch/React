@@ -25,6 +25,7 @@ main {
   width: 50%;
   background: #92D333;
   border-radius: 8px;
+  transition: .2s ease-in;
 }
 
 .ContinueButton {
